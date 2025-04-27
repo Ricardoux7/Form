@@ -7,10 +7,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="h-full w-full bg-gradient-to-b from-[#82e0aa] via-[#85c1e9] to-[#f1948a]">
-    <div class="w-[70vw] h-[20vh] bg-gradient-to-r from-[#9fa8da] to-[#e1bee7] rounded-lg shadow-lg flex flex-col justify-center items-center mx-auto">
-        <h2 class="">Formulario</h2>
-        <p>Complete el siguiente formulario para inscribirse al curso</p>
+    <div class="w-[70vw] h-[20vh] bg-gradient-to-r from-[#9fa8da] to-[#e1bee7] rounded-b-lg shadow-lg flex flex-col justify-center items-center mx-auto">
+        <h2 class="text-4xl text-white">Formulario</h2>
+        <p class="text-white text-2xl text-center">Complete el siguiente formulario para inscribirse al curso</p>
     </div>
+    <form action="submit">
     <Section class="w-[50vw] px-[10%] bg-sky-200 mx-auto mt-10 rounded-lg shadow-lg py-10 block">
         <h1 class="text-center flex justify-center items-center">Register</h1>
         <div class="flex flex-col gap-[10px] md:grid md:grid-cols-2 md:gap-4 px-[10%] mt-10">
@@ -20,9 +21,30 @@
             <input type="text" placeholder="Ciudad" class="h-[50px] w-auto bg-[#c8e6c9] border-2 border-black rounded-lg">
             <input type="text" placeholder="Ocupacion" class="h-[50px] w-auto bg-[#c8e6c9] border-2 border-black rounded-lg">
             <input type="date" placeholder="Fecha de Nacimiento" name="" id="" class="h-[50px] w-auto bg-[#c8e6c9] border-2 border-black rounded-lg">
+            <input type="text" placeholder="Direccion (opcional)" class="h-[50px] w-auto bg-[#c8e6c9] border-2 border-black rounded-lg">
+            <select name="Hobbies" id="" class="h-[50px] w-auto bg-[#c8e6c9] border-2 border-black rounded-lg">
+                <option value="Seleccionar Hobbie" disabled selected>Seleccionar Hobbie</option>
+                <option value="Futbol">Futbol</option>
+                <option value="Tenis">Tenis</option>
+                <option value="Voleybol">Voleybol</option>
+                <option value="Baloncesto">Baloncesto</option>
+                <option value="Esgrima">Esgrima</option>
+                <option value="Videojuegos">Videojuegos</option>
+                <option value="Musica">Musica</option>
+                <option value="Cine">Cine</option>
+                <option value="Teatro">Teatro</option>
+                <option value="Cocina">Cocina</option>
+                <option value="Viajar">Viajar</option>
+                <option value="Leer">Leer</option>
+                <option value="Escribir">Escribir</option>
+                <option value="Dibujar">Dibujar</option>
+                <option value="Cantar">Cantar</option>
+                <option value="Otro">Otro</option>
+            </select>
         </div>
-        <div class="flex flex-col gap-[10px] md:grid md:grid-cols-2 md:gap-4 px-[10%] mt-10 relative">
-            <select name="Pais" id="" class="truncate w-[70%] border-2 rounded-lg ml-auto">
+        <div class="flex flex-col gap-[10px] md:grid md:grid-cols-2 md:gap-4 px-[10%] mt-10 relative justify-center items-center mx-auto">
+            <select name="Pais" id="" class="h-[50px] w-auto bg-[#c8e6c9] border-2 border-black rounded-lg">
+                <option value="Seleccionar Pais" disabled selected>Seleccionar prefijo del Pais</option>
                 <option value="Corea-Del-Sur">Corea Del Sur +82</option>
                 <option value="Japon">Japon +81</option>
                 <option value="Espana">Francia +33</option>
@@ -40,11 +62,11 @@
                 <option value="Panama">Panama +507</option>
             </select>
             <input type="number" placeholder="Telefono" class="h-[50px] w-auto bg-[#c8e6c9] border-2 border-black rounded-lg">
-            <input type="email" placeholder="Correo" class="h-[50px] w-auto bg-[#c8e6c9] border-2 border-black rounded-lg">
         </div>
+        <input type="email" placeholder="Correo" class="w-[90%] h-[50px] bg-[#c8e6c9] border-2 border-black rounded-lg mt-10 mx-auto block flex flex-col">
 
         <h1 class="text-center flex justify-center items-center mt-10">Genero</h1>
-        <div class="flex flex-col md:justify-center items-center mt-5 gap-2">
+        <div class="flex flex-col items-start md:items-center mt-5 gap-2">
             <div>
                 <input type="radio" name="genero" id="genero-masculino">
                 <label for="genero-masculino" class="text-center">Masculino<label>
@@ -55,7 +77,7 @@
             </div>
         </div>
         <h1 class="text-center flex justify-center items-center mt-10">Estado Civil</h1>
-        <div class="flex flex-col gap-2 items-center mt-5">
+        <div class="flex flex-col gap-2 md:items-center items-start mt-5">
             <div>
             <input type="radio" name="Estado-civil" id="soltero">
             <label for="soltero" class="text-center">Soltero</label>
@@ -69,10 +91,8 @@
             <label for="Complicado" class="text-center">Complicado</label>
             </div>
         </div>
-        <h1 class="text-center flex justify-center items-center mt-10">Datos de contacto</h1>
-        
         <h1 class="text-center justify-center items-center mt-10">Curso Interesado</h1>
-        <div class="flex flex-col gap-2 items-center">
+        <div class="flex flex-col gap-2 items-start md:items-center">
             <div class="mt-7">
             <input type="radio" name="Interes" id="Programacion">
             <label for="Programacion">Programacion</label>
@@ -96,7 +116,7 @@
         </div>
             <!--Marketing-->
         <h1 class="text-center justify-center items-center mt-10">Como conociste este curso</h1>
-        <div class="flex flex-col gap-2 items-center">
+        <div class="flex flex-col gap-2 items-start md:items-center">
             <div class="mt-7">
             <input type="radio" name="Marketing" id="Redes-Sociales">
             <label for="Redes-Sociales">Redes Sociales</label>
@@ -118,12 +138,17 @@
             <label for="Investigue-por-mi-cuenta">Investigue por mi cuenta</label>
             </div>
         </div>
-
-        <h1 class="text-center justify-center items-center mt-10">Comentarios</h1>
+        <h1 class="text-center justify-center items-center mt-10">Tienes alguna pregunta o inquietud acerca del curso?</h1>
         <div class="flex flex-col gap-2 items-center mt-5">
             <textarea name="" id="" cols="30" rows="10" class="w-[70%] h-[100px] bg-[#c8e6c9] border-2 border-black rounded-lg"></textarea>
         </div>
-        <button class="bg-[#4CAF50] hover:bg-[#3e8e41] text-white font-bold py-2 px-4 rounded flex mx-auto mt-5">Enviar</button>
+        <h1 class="text-center justify-center items-center mt-10">Acepto los <span class="text-blue-600 cursor-pointer">terminos y condiciones</span></h1>
+        <div class="flex justify-center gap-2 items-center mt-5">
+            <input type="checkbox" name="" id="acepto" class="w-[20px] h-[20px] cursor-pointer">
+            <label for="acepto" class="text-center cursor-pointer">Acepto</label>
+        </div>
+        <button type="submit" class="bg-[#4CAF50] hover:bg-[#3e8e41] text-white font-bold py-2 px-4 rounded flex mx-auto mt-5 cursor-pointer">Enviar</button>
     </Section>
+</form>
 </body>
 </html>
